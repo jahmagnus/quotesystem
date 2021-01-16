@@ -1,13 +1,44 @@
 package com.magnus;
 
-public class CustomerAccount {
+import java.util.Scanner;
 
+public class CustomerAccount {
+    private static Scanner sc = new Scanner(System.in);
     private PaymentCard paymentCard;
     private Customer customer;
     private Quote quote;
     private Order order;
     private String address;
     private String emailAddress;
-    private String accountID;
+    private int accountID;
+
+    public CustomerAccount(PaymentCard paymentCard, Customer customer, Quote quote, Order order, String address, String emailAddress, int accountID) {
+        this.paymentCard = paymentCard;
+        this.customer = customer;
+        this.quote = quote; //Account can exist without a quote
+        this.order = order; //Account can exist without an order
+        this.address = address;
+        this.emailAddress = emailAddress;
+        this.accountID = accountID;
+    }
+
+//    public Customer userRegistration(){
+//        System.out.println("Enter first name");
+//        String firstName = sc.nextLine();
+//        System.out.println("Enter surname");
+//        String surname = sc.nextLine();
+//        return new Customer(firstName, surname);
+//    }
+
+
+    public int generateAccountID(){
+        int min = 1000000;
+        int max = 9999999;
+
+        int 
+    }
+
+
+
 
 }
