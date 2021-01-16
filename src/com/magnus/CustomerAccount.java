@@ -19,7 +19,7 @@ public class CustomerAccount {
         this.order = order; //Account can exist without an order
         this.address = address;
         this.emailAddress = emailAddress;
-        this.accountID = accountID;
+        this.accountID = generateAccountID();
     }
 
 //    public Customer userRegistration(){
@@ -35,7 +35,8 @@ public class CustomerAccount {
         int min = 1000000;
         int max = 9999999;
 
-        int 
+        int idNumber = (int)Math.random() * ( max - min );
+        return idNumber;
     }
 
 
