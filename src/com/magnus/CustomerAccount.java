@@ -1,9 +1,11 @@
 package com.magnus;
 
 import java.util.Scanner;
+import java.util.Set;
 
 public class CustomerAccount {
     private static Scanner sc = new Scanner(System.in);
+
     private PaymentCard paymentCard;
     private Customer customer;
     private Quote quote;
