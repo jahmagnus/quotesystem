@@ -12,7 +12,7 @@ public class CustomerAccount {
     private String emailAddress;
     private int accountID;
 
-    public CustomerAccount(PaymentCard paymentCard, Customer customer, Quote quote, Order order, String address, String emailAddress, int accountID) {
+    public CustomerAccount(PaymentCard paymentCard, Customer customer, String address, String emailAddress) {
         this.paymentCard = paymentCard;
         this.customer = customer;
         this.quote = quote; //Account can exist without a quote

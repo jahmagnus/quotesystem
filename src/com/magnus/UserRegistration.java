@@ -8,6 +8,12 @@ public class UserRegistration {
 
     public CustomerAccount createNewCustomerAccount(){
         PaymentCard paymentCard = loadPaymentCard();
+        Customer customer = createCustomer();
+        System.out.println("Address");
+        String address = sc.next();
+        System.out.println("Email");
+        String email = sc.next();
+        return new CustomerAccount(paymentCard, customer, address, email);
     }
 
     public PaymentCard loadPaymentCard(){
@@ -25,6 +31,14 @@ public class UserRegistration {
         int securityNumber = sc.nextInt();;
         return new PaymentCard(name, cardNumber, expiryDate, securityNumber);
 
+    }
+
+    public Customer createCustomer(){
+        System.out.println("Customer first name");
+        String name = sc.nextLine();
+        System.out.println("Customer surname");
+        String surname = sc.nextLine();
+        return new Customer(name, surname);
     }
 
 }
